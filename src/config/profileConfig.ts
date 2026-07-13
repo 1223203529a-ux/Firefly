@@ -24,8 +24,8 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "QQ",
 			icon: "fa7-brands:qq",
-			url: "https://qm.qq.com/q/3651055492",
-			showName: false,
+			url: "tencent://message/?uin=3651055492&Site=Firefly&Menu=yes",
+			showName: true,
 		},
 		{
 			name: "GitHub",
@@ -34,10 +34,10 @@ export const profileConfig: ProfileConfig = {
 			showName: false,
 		},
 		{
-			name: "Email",
+			name: "3651055492@qq.com",
 			icon: "fa7-solid:envelope",
 			url: "mailto:3651055492@qq.com",
-			showName: false,
+			showName: true,
 		},
 		{
 			name: "RSS",
