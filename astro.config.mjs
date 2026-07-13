@@ -209,7 +209,7 @@ export default defineConfig({
 			],
 			rehypePlugins: [
 				[rehypeKatex, { katex }],
-				[rehypeCallouts, { theme: siteConfig.rehypeCallouts.theme }],
+				[rehypeCallouts, { theme: siteConfig.rehypeCallouts?.theme }],
 				rehypeSlug,
 				rehypeMermaid,
 				rehypePlantuml,
@@ -259,7 +259,7 @@ export default defineConfig({
 		},
 		resolve: {
 			alias: {
-				"@rehype-callouts-theme": `rehype-callouts/theme/${siteConfig.rehypeCallouts.theme}`,
+				"@rehype-callouts-theme": `rehype-callouts/theme/${siteConfig.rehypeCallouts?.theme}`,
 			},
 		},
 		build: {
