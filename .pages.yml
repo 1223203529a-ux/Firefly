@@ -45,6 +45,14 @@ content:
       - name: image
         label: 封面图
         type: image
+      - name: password
+        label: 文章密码
+        type: string
+        description: 不填则公开；填写后访客需要输入密码才能查看正文。
+      - name: passwordHint
+        label: 密码提示
+        type: string
+        description: 可选，显示给访客看的密码提示。
       - name: body
         label: 正文
         type: rich-text
