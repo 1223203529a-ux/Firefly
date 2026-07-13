@@ -22,10 +22,10 @@ export const profileConfig: ProfileConfig = {
 	// showName: true 时显示图标和名称，false 时只显示图标
 	links: [
 		{
-			name: "QQ",
+			name: "qq",
 			icon: "fa7-brands:qq",
 			url: "/assets/images/image.png",
-			showName: true,
+			showName: false,
 		},
 		{
 			name: "GitHub",
