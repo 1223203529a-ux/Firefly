@@ -24,7 +24,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "QQ",
 			icon: "fa7-brands:qq",
-			url: "tencent://message/?uin=3651055492&Site=Firefly&Menu=yes",
+			url: "/assets/images/image.png",
 			showName: true,
 		},
 		{
