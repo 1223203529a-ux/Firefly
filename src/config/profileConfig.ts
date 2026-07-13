@@ -1,6 +1,6 @@
 import type { ProfileConfig } from "@src/config";
 
-const profileConfig: ProfileConfig = {
+export const profileConfig: ProfileConfig = {
   name: "Firefly",
   avatar: "/assets/images/avatar.png",
   bio: "Hello, I'm Firefly.",
@@ -22,5 +22,3 @@ const profileConfig: ProfileConfig = {
     },
   ],
 };
-
-export default profileConfig;
