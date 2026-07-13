@@ -19,12 +19,12 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	];
 
 	// 根据配置决定是否添加友链，在siteConfig关闭pages.friends时导航栏不显示友链
-	if (siteConfig.pages.friends) {
+	if (siteConfig.pages?.friends) {
 		links.push(LinkPreset.Friends);
 	}
 
 	// 根据配置决定是否添加留言板，在siteConfig关闭pages.guestbook时导航栏不显示留言板
-	if (siteConfig.pages.guestbook) {
+	if (siteConfig.pages?.guestbook) {
 		links.push(LinkPreset.Guestbook);
 	}
 
@@ -35,10 +35,10 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		icon: "material-symbols:person",
 		children: [
 			// 根据配置决定是否添加相册，在siteConfig关闭pages.gallery时导航栏不显示相册
-			...(siteConfig.pages.gallery ? [LinkPreset.Gallery] : []),
+			...(siteConfig.pages?.gallery ? [LinkPreset.Gallery] : []),
 
 			// 根据配置决定是否添加番组计划，在siteConfig关闭pages.bangumi时导航栏不显示番组计划
-			...(siteConfig.pages.bangumi ? [LinkPreset.Bangumi] : []),
+			...(siteConfig.pages?.bangumi ? [LinkPreset.Bangumi] : []),
 		],
 	});
 
@@ -49,7 +49,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		icon: "material-symbols:info",
 		children: [
 			// 根据配置决定是否添加赞助，在siteConfig关闭pages.sponsor时导航栏不显示赞助
-			...(siteConfig.pages.sponsor ? [LinkPreset.Sponsor] : []),
+			...(siteConfig.pages?.sponsor ? [LinkPreset.Sponsor] : []),
 
 			// 关于页面
 			LinkPreset.About,
