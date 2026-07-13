@@ -11,7 +11,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	showInNavbar: true,
 
 	// 使用方式："meting" 使用 Meting API，"local" 使用本地音乐列表
-	mode: "meting",
+	mode: "local",
 
 	// 默认音量 (0-1)
 	volume: 0.7,
@@ -55,6 +55,13 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				url: "/assets/music/使一颗心免于哀伤-哼唱.mp3",
 				cover: "/assets/music/cover/109951169585655912.webp",
 				lrc: "",
+			},
+			{
+				name: "像鱼",
+				artist: "王贰浪",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1331819951&auth=f8910f58b9364a51af4ef789f6a2ff2c3d1d6761",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951169297651430&auth=8082ee9dbdf91b228d56e1ac914129ae595d124b",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1331819951&auth=09e050cef44d1b9bb109ff5b17b20fff281f31e6",
 			},
 		],
 	},
