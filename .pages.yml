@@ -1,0 +1,50 @@
+media:
+  input: src/content/posts/images
+  output: ./images
+
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: src/content/posts
+    subfolders: true
+    format: yaml-frontmatter
+    filename:
+      template: "{year}-{month}-{day}-{title}.md"
+      field: create
+    view:
+      primary: title
+      fields: [published, category, draft]
+      sort: published
+      order: desc
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: published
+        label: 发布日期
+        type: date
+        required: true
+      - name: pinned
+        label: 置顶
+        type: boolean
+      - name: description
+        label: 摘要
+        type: text
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+      - name: category
+        label: 分类
+        type: string
+      - name: draft
+        label: 草稿
+        type: boolean
+      - name: image
+        label: 封面图
+        type: image
+      - name: body
+        label: 正文
+        type: rich-text
