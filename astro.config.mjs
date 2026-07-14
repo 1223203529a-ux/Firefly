@@ -37,7 +37,7 @@ import rehypeEmailProtection from "./src/plugins/rehype-email-protection.mjs";
 import rehypeExternalLinks from "./src/plugins/rehype-external-links.mjs";
 import rehypeFigure from "./src/plugins/rehype-figure.mjs";
 import { remarkImageGrid } from "./src/plugins/remark-image-grid.js";
-import { plantumlConfig } from "./src/config";							
+import { plantumlConfig } from "./src/config";
 
 if (process.env.NODE_ENV === "development") {
 	setMaxListeners(20);
@@ -45,9 +45,9 @@ if (process.env.NODE_ENV === "development") {
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://firefly-08r.pages.dev",
+	site: "https://1223203529a-ux.github.io",
 
-	base: "/",
+	base: "/Firefly/",
 	trailingSlash: "always",
 
 	// 图像优化配置
@@ -123,8 +123,7 @@ export default defineConfig({
 								previewLines:
 									expressiveCodeConfig.pluginCollapsible.previewLines || 8,
 								defaultCollapsed:
-									expressiveCodeConfig.pluginCollapsible.defaultCollapsed ??
-									true,
+									expressiveCodeConfig.pluginCollapsible.defaultCollapsed ?? true,
 								expandButtonText: i18n(I18nKey.codeCollapsibleShowMore),
 								collapseButtonText: i18n(I18nKey.codeCollapsibleShowLess),
 								expandedAnnouncement: i18n(I18nKey.codeCollapsibleExpanded),
@@ -209,13 +208,13 @@ export default defineConfig({
 			],
 			rehypePlugins: [
 				[rehypeKatex, { katex }],
-				[rehypeCallouts, { theme: siteConfig.rehypeCallouts?.theme }],
+				[rehypeCallouts, { theme: "github" }],
 				rehypeSlug,
 				rehypeMermaid,
 				rehypePlantuml,
 				rehypeFigure,
 				[rehypeExternalLinks, { siteUrl: siteConfig.site_url }],
-				[rehypeEmailProtection, { method: "base64" }], // 邮箱保护插件，支持 'base64' 或 'rot13'
+				[rehypeEmailProtection, { method: "base64" }],
 				[
 					rehypeComponents,
 					{
@@ -236,7 +235,7 @@ export default defineConfig({
 							tagName: "span",
 							properties: {
 								className: ["anchor-icon"],
-								"data-pagefind-ignore": true,
+								"data-page-ignore": true,
 							},
 							children: [
 								{
@@ -254,24 +253,22 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 		server: {
 			watch: {
-				ignored: ["**/package/**", "**/Firefly-docs/**"],
+				ignored: ["/**/package/**", "/**/Firefly-docs/**"],
 			},
 		},
 		resolve: {
 			alias: {
-				"@rehype-callouts-theme": `rehype-callouts/theme/${siteConfig.rehypeCallouts?.theme}`,
+				"@rehype-callouts-theme": "rehype-callouts/theme/github",
 			},
 		},
 		build: {
 			minify: "esbuild",
 			esbuildOptions: {
 				minify: true,
-				// 移除 console.log 和 debugger
 				drop: ["console", "debugger"],
 			},
 			rollupOptions: {
 				onwarn(warning, warn) {
-					// temporarily suppress this warning
 					if (
 						warning.message.includes("is dynamically imported by") &&
 						warning.message.includes("but also statically imported by")
@@ -281,7 +278,6 @@ export default defineConfig({
 					warn(warning);
 				},
 			},
-			// CSS 优化
 			cssCodeSplit: true,
 			cssMinify: "esbuild",
 			assetsInlineLimit: 4096,
