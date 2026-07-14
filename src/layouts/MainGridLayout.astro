@@ -60,6 +60,12 @@ interface Props {
 }
 
 const backgroundImages = getBackgroundImages();
+const backgroundMobileImages = Array.isArray(backgroundImages?.mobile)
+	? backgroundImages.mobile
+	: [];
+const backgroundDesktopImages = Array.isArray(backgroundImages?.desktop)
+	? backgroundImages.desktop
+	: [];
 
 const {
 	title,
@@ -314,18 +320,18 @@ const bannerCarouselInterval = Math.max(
 }>
     <!-- 背景图片显示 -->
     <div class="relative h-full w-full" id="banner-images-container"
-         data-mobile-count={backgroundImages.mobile.length}
-         data-desktop-count={backgroundImages.desktop.length}
+         data-mobile-count={backgroundMobileImages.length}
+         data-desktop-count={backgroundDesktopImages.length}
          data-carousel-enabled={bannerCarouselEnabledDefault}
          data-carousel-switchable={bannerCarouselSwitchable}
          data-carousel-interval={bannerCarouselInterval}>
         <!-- Mobile: 默认渲染第一张，其余放入 template 避免浏览器预加载 -->
-        {backgroundImages.mobile.length > 0 && (
+        {backgroundMobileImages.length > 0 && (
             <div class="banner-image-slot-mobile absolute inset-0 block lg:hidden">
                 <ImageWrapper
                     alt="Mobile background image of the blog"
                     class="object-cover h-full w-full"
-                    src={backgroundImages.mobile[0]}
+                    src={backgroundMobileImages[0]}
                     position={backgroundWallpaper.banner?.position}
                     widths={[640, 750, 1080]}
                     sizes="100vw"
@@ -335,7 +341,7 @@ const bannerCarouselInterval = Math.max(
                 />
             </div>
         )}
-        {backgroundImages.mobile.slice(1).map((src) => (
+        {backgroundMobileImages.slice(1).map((src) => (
             <template class="banner-tpl-mobile">
                 <ImageWrapper
                     alt="Mobile background image of the blog"
@@ -351,13 +357,13 @@ const bannerCarouselInterval = Math.max(
             </template>
         ))}
         <!-- Desktop: 默认渲染第一张，其余放入 template -->
-        {backgroundImages.desktop.length > 0 && (
+        {backgroundDesktopImages.length > 0 && (
             <div class="banner-image-slot-desktop absolute inset-0 hidden lg:block">
                 <ImageWrapper
                     id="banner"
                     alt="Desktop background image of the blog"
                     class="object-cover h-full"
-                    src={backgroundImages.desktop[0]}
+                    src={backgroundDesktopImages[0]}
                     position={backgroundWallpaper.banner?.position}
                     widths={[1280, 1920, 2560]}
                     sizes="100vw"
@@ -367,7 +373,7 @@ const bannerCarouselInterval = Math.max(
                 />
             </div>
         )}
-        {backgroundImages.desktop.slice(1).map((src) => (
+        {backgroundDesktopImages.slice(1).map((src) => (
             <template class="banner-tpl-desktop">
                 <ImageWrapper
                     id="banner"

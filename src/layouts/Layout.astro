@@ -82,14 +82,16 @@ if (siteConfig.generateOgImages && postSlug) {
 	ogImageUrl = new URL(`/og/${postSlug}.png`, Astro.site).toString();
 }
 
+const configuredFavicons = Array.isArray(siteConfig.favicon) ? siteConfig.favicon : [];
 const favicons: Favicon[] =
-	siteConfig.favicon.length > 0 ? siteConfig.favicon : defaultFavicons;
+	configuredFavicons.length > 0 ? configuredFavicons : defaultFavicons;
 
 // const siteLang = siteConfig.lang.replace('_', '-')
 if (!lang) {
 	lang = `${siteConfig.lang}`;
 }
 const siteLang = lang.replace("_", "-");
+const fontConfig = siteConfig.font ?? { enable: false, selected: undefined };
 
 // 使用固定的banner偏移量，position配置用于图片定位
 ---
@@ -569,10 +571,10 @@ const siteLang = lang.replace("_", "-");
         "enable-card-border": siteConfig.card?.border,
         "card-follow-theme-hue": siteConfig.card?.followTheme,
       },
-      ...(siteConfig.font.enable && siteConfig.font.selected
-        ? (Array.isArray(siteConfig.font.selected)
-            ? siteConfig.font.selected
-            : [siteConfig.font.selected]
+      ...(fontConfig.enable && fontConfig.selected
+        ? (Array.isArray(fontConfig.selected)
+            ? fontConfig.selected
+            : [fontConfig.selected]
           ).map((fontId) => `font-${fontId}-enabled`)
         : []),
     ]}

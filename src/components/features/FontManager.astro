@@ -1,7 +1,7 @@
 ---
 import { siteConfig } from "@/config";
 
-const { font: fontConfig } = siteConfig;
+const fontConfig = siteConfig.font ?? { enable: false, selected: undefined, fonts: {}, fallback: [], preload: false };
 
 // 获取选中的字体
 const getSelectedFonts = () => {
@@ -12,7 +12,7 @@ const getSelectedFonts = () => {
 		: [fontConfig.selected];
 
 	return selectedIds
-		.map((id) => fontConfig.fonts[id])
+		.map((id) => fontConfig.fonts?.[id])
 		.filter((font) => font?.src); // 过滤掉系统字体和不存在的字体
 };
 
@@ -40,7 +40,7 @@ const generateFontFamilyStyle = () => {
 		: [fontConfig.selected];
 
 	const selectedFontFamilies = selectedIds
-		.map((id) => fontConfig.fonts[id])
+		.map((id) => fontConfig.fonts?.[id])
 		.filter((font) => font)
 		.map((font) => `"${font.family}"`);
 

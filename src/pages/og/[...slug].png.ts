@@ -120,8 +120,9 @@ export async function GET({
 	}
 
 	let iconPath = "./public/favicon/favicon-dark-192.png";
-	if (siteConfig.favicon.length > 0) {
-		iconPath = `./public${siteConfig.favicon[0].src}`;
+	const configuredFavicons = Array.isArray(siteConfig.favicon) ? siteConfig.favicon : [];
+	if (configuredFavicons.length > 0) {
+		iconPath = `./public${configuredFavicons[0].src}`;
 	}
 	const iconBuffer = fs.readFileSync(iconPath);
 	const iconBase64 = `data:image/png;base64,${iconBuffer.toString("base64")}`;

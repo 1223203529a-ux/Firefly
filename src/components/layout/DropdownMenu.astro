@@ -32,7 +32,7 @@ const processedLink = {
 			}
 			return child;
 		})
-		.filter((child): child is NavBarLink => child !== null),
+		.filter((child): child is NavBarLink => !!child),
 };
 
 const hasChildren = processedLink.children && processedLink.children.length > 0;

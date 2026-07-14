@@ -8,16 +8,20 @@ interface Props {
 	links: NavBarLink[];
 }
 
-// 处理links中的LinkPreset转换
-const processedLinks = Astro.props.links.map((link: NavBarLink) => ({
-	...link,
-	children: link.children?.map((child: NavBarLink | LinkPreset): NavBarLink => {
-		if (typeof child === "number") {
-			return LinkPresets[child];
-		}
-		return child;
-	}),
-}));
+// 处理 links 中的 LinkPreset 转换，并过滤无法解析的预设项
+const processedLinks = Astro.props.links
+	.filter((link: NavBarLink) => !!link)
+	.map((link: NavBarLink) => ({
+		...link,
+		children: link.children
+			?.map((child: NavBarLink | LinkPreset): NavBarLink | undefined => {
+				if (typeof child === "number") {
+					return LinkPresets[child];
+				}
+				return child;
+			})
+			.filter((child): child is NavBarLink => !!child),
+	}));
 ---
 <div id="nav-menu-panel" class:list={["float-panel float-panel-closed transition-all fixed right-4 px-2 py-2 max-h-[80vh] overflow-y-auto"]}>
     {processedLinks.map((link) => (

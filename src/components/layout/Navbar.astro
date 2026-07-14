@@ -57,14 +57,14 @@ const allowLayoutSwitch = siteConfig.postListLayout.allowSwitch;
 const hasDisplaySettings =
 	showThemeColor || isWallpaperSwitchable || allowLayoutSwitch;
 
-let links: NavBarLink[] = navBarConfig.links.map(
-	(item: NavBarLink | LinkPreset): NavBarLink => {
+let links: NavBarLink[] = navBarConfig.links
+	.map((item: NavBarLink | LinkPreset): NavBarLink | undefined => {
 		if (typeof item === "number") {
 			return LinkPresets[item];
 		}
 		return item;
-	},
-);
+	})
+	.filter((item): item is NavBarLink => !!item);
 
 // 处理导航栏 Logo 图片
 const logoValue = siteConfig.navbar.logo?.value || "";
