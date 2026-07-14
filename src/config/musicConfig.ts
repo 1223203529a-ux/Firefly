@@ -50,10 +50,10 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 			},
 			{
 				name: "剩下的盛夏",
-				artist: "TFBOYS / 嘻游记",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=34228130&auth=319f218847b36f696b3689384745e13cee5b00e1",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951167560635959&auth=2e5900537a42fe5423f853b0fa26d4f3e5c490a6",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=34228130&auth=fa41e1a65054bcbf599b300df8115052633d107f",
+				artist: "TFBOYS",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2112276979&auth=b981b696ffb96fd29c958e5d469ade2dec6d18b3",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951169215305784&auth=8a1b7299b5992a52e51a9c79e200b948acedf19e",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2112276979&auth=c25f9799542d4e7253219c1c341d582fb6ebc314",
 			},
 			{
 				name: "唯一（邓紫棋版）",
