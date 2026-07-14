@@ -56,7 +56,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=34228130&auth=fa41e1a65054bcbf599b300df8115052633d107f",
 			},
 			{
-				name: "唯一",
+				name: "唯一（邓紫棋版）",
 				artist: "G.E.M.邓紫棋",
 				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2083785152&auth=5dbf5f2de8d60e492304ebf85e4effda5d2e947a",
 				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951168919708423&auth=9705e7cb18afb3a6a0d9daee270ddcfdae48f4c7",

@@ -43,9 +43,8 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 					icon: "fa7-brands:github",
 				},
 				{
-					name: "QQ交流群",
-					url: "https://qm.qq.com/q/ZGsFa8qX2G",
-					external: true,
+					name: "我的QQ",
+					url: "/assets/images/image.png",
 					icon: "fa7-brands:qq",
 				},
 			],

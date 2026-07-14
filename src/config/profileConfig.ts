@@ -8,7 +8,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "qq",
 			icon: "fa7-brands:qq",
-			url: "https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&from=qqchat&k=&n=&uin=3651055492&wpa_qrcode=1",
+			url: "/assets/images/image.png",
 			showName: false,
 		},
 		{
@@ -18,10 +18,10 @@ export const profileConfig: ProfileConfig = {
 			showName: false,
 		},
 		{
-			name: "Email",
+			name: "3651055492@qq.com",
 			icon: "fa7-solid:envelope",
 			url: "mailto:3651055492@qq.com",
-			showName: false,
+			showName: true,
 		},
 	],
 };

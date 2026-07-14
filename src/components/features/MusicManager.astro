@@ -133,36 +133,49 @@ const managerConfigStr = JSON.stringify({
         if (!config.meting) return;
         var m = config.meting;
         var apis = [m.api].concat(m.fallbackApis || []);
+        var ids = Array.isArray(m.id)
+            ? m.id
+            : String(m.id || '').split(',').map(function (id) { return id.trim(); }).filter(Boolean);
+        var playlist = [];
 
         for (var i = 0; i < apis.length; i++) {
             var baseApi = apis[i];
             if (!baseApi) continue;
-            try {
-                var fetchUrl = baseApi
-                    .replace(':server', m.server)
-                    .replace(':type', m.type)
-                    .replace(':id', m.id)
-                    .replace(':r', Math.random());
-                if (m.auth) fetchUrl += '&auth=' + m.auth;
 
-                var res = await fetch(fetchUrl);
-                if (!res.ok) throw new Error('HTTP ' + res.status);
-                var data = await res.json();
+            for (var j = 0; j < ids.length; j++) {
+                try {
+                    var fetchUrl = baseApi
+                        .replace(':server', m.server)
+                        .replace(':type', m.type)
+                        .replace(':id', ids[j])
+                        .replace(':r', Math.random());
+                    if (m.auth) fetchUrl += '&auth=' + m.auth;
 
-                if (Array.isArray(data) && data.length > 0) {
-                    state.playlist = data.map(function (item) {
-                        return {
-                            name: item.title || item.name || 'Unknown',
-                            artist: item.author || item.artist || 'Unknown',
-                            url: item.url,
-                            pic: item.pic || item.cover || '',
-                            lrc: item.lrc
-                        };
-                    });
-                    return;
+                    var res = await fetch(fetchUrl);
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    var data = await res.json();
+
+                    if (Array.isArray(data) && data.length > 0) {
+                        playlist = playlist.concat(data.map(function (item) {
+                            return {
+                                name: item.title || item.name || 'Unknown',
+                                artist: item.author || item.artist || 'Unknown',
+                                url: item.url,
+                                pic: item.pic || item.cover || '',
+                                lrc: item.lrc
+                            };
+                        }).filter(function (item) {
+                            return !!item.url;
+                        }));
+                    }
+                } catch (e) {
+                    console.warn('Meting API failed for ' + baseApi + ' id=' + ids[j], e);
                 }
-            } catch (e) {
-                console.warn('Meting API failed for ' + baseApi, e);
+            }
+
+            if (playlist.length > 0) {
+                state.playlist = playlist;
+                return;
             }
         }
         throw new Error('All Meting APIs failed');
