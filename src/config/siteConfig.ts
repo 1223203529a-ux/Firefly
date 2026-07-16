@@ -50,7 +50,7 @@ export const siteConfig: SiteConfig = {
 	// 页面开关配置
 	pages: {
 		friends: true,
-		sponsor: true,
+		sponsor: false,
 		guestbook: true,
 		bangumi: true,
 		gallery: true,
