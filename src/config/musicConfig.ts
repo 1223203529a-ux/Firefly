@@ -29,7 +29,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		type: "song",
 
 		// 单曲ID（逗号分隔，按播放顺序）
-		id: "109951169585655912,1342638960,36270466,34228130,26207295",
+		id: "2010069209,1394167216,1331819951,27483167,470013134,287319",
 
 		// 备用API配置（当主API失败时自动切换）
 		fallbackApis: [
@@ -42,25 +42,46 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
+				name: "剩下的盛夏",
+				artist: "杨鹤松",
+				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=2010069209",
+				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951169215305784",
+				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=2010069209",
+			},
+			{
+				name: "知我",
+				artist: "国风堂/哦漏",
+				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=1394167216",
+				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951169297651430",
+				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=1394167216",
+			},
+			{
 				name: "像鱼",
 				artist: "王贰浪",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1331819951&auth=f8910f58b9364a51af4ef789f6a2ff2c3d1d6761",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951169297651430&auth=8082ee9dbdf91b228d56e1ac914129ae595d124b",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1331819951&auth=09e050cef44d1b9bb109ff5b17b20fff281f31e6",
+				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=1331819951",
+				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951169297651430",
+				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=1331819951",
 			},
 			{
-				name: "剩下的盛夏",
-				artist: "TFBOYS",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2112276979&auth=b981b696ffb96fd29c958e5d469ade2dec6d18b3",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951169215305784&auth=8a1b7299b5992a52e51a9c79e200b948acedf19e",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2112276979&auth=c25f9799542d4e7253219c1c341d582fb6ebc314",
+				name: "唯一",
+				artist: "王力宏",
+				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=27483167",
+				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951168919708423",
+				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=27483167",
 			},
 			{
-				name: "唯一（邓紫棋版）",
-				artist: "G.E.M.邓紫棋",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2083785152&auth=5dbf5f2de8d60e492304ebf85e4effda5d2e947a",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951168919708423&auth=9705e7cb18afb3a6a0d9daee270ddcfdae48f4c7",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2083785152&auth=ea4a612f684f59ccad8d01f7fdbffa8147b65d8c",
+				name: "晴天",
+				artist: "赵方婧",
+				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=470013134",
+				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951169215305784",
+				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=470013134",
+			},
+			{
+				name: "遇见",
+				artist: "孙燕姿",
+				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=287319",
+				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951169297651430",
+				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=287319",
 			},
 		],
 	},

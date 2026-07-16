@@ -4,17 +4,18 @@
 
 欢迎来到我的个人小站 **Snozze daily life**。这里会记录生活中的点滴、学习技术时遇到的问题、一些有趣的想法，以及我想长期保存下来的内容。
 
-## 联系方式
+## 关于本站
 
-如果你想和我交流问题，分享有趣的想法，或者只是想打个招呼，欢迎通过以下方式联系我：
+这个网站基于 **Astro** 和 **Firefly** 主题搭建，部署在 Cloudflare Pages：
 
-- QQ：3651055492    微信：15871486549
 - 站点地址：[https://firefly-08r.pages.dev](https://firefly-08r.pages.dev)
 - 邮箱：[3651055492@qq.com](mailto:3651055492@qq.com)
 - GitHub：[https://github.com/1223203529a-ux](https://github.com/1223203529a-ux)
+- 抖音：41574866947
+
 ## 想写些什么
 
-- 图床: [https://cloudflare-imgbed.1223203529a.workers.dev/](https://cloudflare-imgbed.1223203529a.workers.dev/)
+我希望这里不只是一个博客模板，而是一个真正属于自己的空间。
 
 以后这里会慢慢放一些生活记录、学习笔记、博客折腾过程、喜欢的音乐和图片，也会记录一些阶段性的想法。
 
