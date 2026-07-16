@@ -1,4 +1,4 @@
-import type { ProfileConfig } from "../types/profileConfig";
+﻿import type { ProfileConfig } from "../types/profileConfig";
 
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.avif",
@@ -19,7 +19,7 @@ export const profileConfig: ProfileConfig = {
 		},
 		{
 			name: "抖音",
-			icon: "mdi:douyin",
+			icon: "simple-icons:tiktok",
 			url: "https://www.douyin.com/user/self?from_tab_name=main&showSubTab=video&showTab=like",
 			showName: false,
 		},
@@ -31,3 +31,4 @@ export const profileConfig: ProfileConfig = {
 		},
 	],
 };
+
