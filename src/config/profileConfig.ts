@@ -18,6 +18,12 @@ export const profileConfig: ProfileConfig = {
 			showName: false,
 		},
 		{
+			name: "抖音",
+			icon: "mdi:douyin",
+			url: "https://www.douyin.com/user/self?from_tab_name=main&showSubTab=video&showTab=like",
+			showName: false,
+		},
+		{
 			name: "3651055492@qq.com",
 			icon: "fa7-solid:envelope",
 			url: "mailto:3651055492@qq.com",

@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
 		"🌸 欢迎来到我的小窝！这里是 Snozze 的个人博客，记录生活中的点滴、技术学习的笔记，以及一些奇思妙想。希望能给你带来一些温暖和灵感~",
 	// 站点关键词
 	keywords: [
-		"Firefly", "Fuwari", "Astro", "Snozze", "博客", "个人博客", "静态博客", "生活记录", "技术分享",
+		"Firefly", "ncu", "Astro", "Snozze", "博客", "个人博客", "静态博客", "生活记录", "医学生",
 	],
 	// 主题色
 	themeColor: {
