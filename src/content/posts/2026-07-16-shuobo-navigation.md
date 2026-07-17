@@ -1,5 +1,5 @@
 ---
-title: 硕博领航
+title: 硕博鼎桥领航
 published: 2026-07-16
 pinned: false
 description: 硕博数理化AI教学平台资料汇总
