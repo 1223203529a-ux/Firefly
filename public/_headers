@@ -1,0 +1,29 @@
+﻿# Astro build artifacts (content-hashed filenames, safe to cache forever)
+/_astro/*
+
+  Cache-Control: public, max-age=31536000, immutable
+
+# Pagefind search index (content-hashed)
+/pagefind/*
+
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static images/fonts/icons
+/assets/*
+
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Favicon icons
+/favicon/*
+
+  Cache-Control: public, max-age=604800
+
+# Live2D assets
+/pio/*
+
+  Cache-Control: public, max-age=604800
+
+# HTML pages (always revalidate)
+/*.html
+
+  Cache-Control: public, max-age=0, must-revalidate
