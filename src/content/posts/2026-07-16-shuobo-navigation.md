@@ -7,8 +7,8 @@ category: 资料
 tags: [硕博领航, AI教学, 数理化]
 draft: false
 image: images/cover.avif
-password: "122320"
-passwordHint: 保密
+password: "159753"
+passwordHint: 敏感信息
 ---
 
 ## 群公告
