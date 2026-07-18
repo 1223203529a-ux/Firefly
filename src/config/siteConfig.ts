@@ -118,7 +118,7 @@ export const siteConfig: SiteConfig = {
 	// 图像优化及响应式配置
 	imageOptimization: {
 		formats: "webp",
-		quality: 85,
+		quality: 70,
 		noReferrerDomains: ["*.hdslb.com", "*.bilibili.com"],
 	},
 	// 是否启用主题色选择器

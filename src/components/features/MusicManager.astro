@@ -378,10 +378,7 @@ const managerConfigStr = JSON.stringify({
                 // Apply volume
                 audio.volume = state.volume;
 
-                var startIndex = 0;
-                if (state.playMode === 2) {
-                    startIndex = Math.floor(Math.random() * state.playlist.length);
-                }
+                var startIndex = Math.floor(Math.random() * state.playlist.length);
 
                 state.initialized = true;
 
