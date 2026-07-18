@@ -230,7 +230,7 @@
 
   const script = document.createElement("script");
 
-  script.src = "https://unpkg.com/@waline/admin@0.34.2/dist/admin.js";
+  script.src = "https://s4.zstatic.net/npm/@waline/admin@0.34.2/dist/admin.js";
   script.async = false;
   document.body.appendChild(script);
 })();

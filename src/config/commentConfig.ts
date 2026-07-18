@@ -28,9 +28,9 @@ export const commentConfig: CommentConfig = {
 		lang: "zh-CN",
 		// 设置 Waline 评论系统表情地址
 		emoji: [
-			"https://unpkg.com/@waline/emojis@1.4.0/weibo",
-			"https://unpkg.com/@waline/emojis@1.4.0/bilibili",
-			"https://unpkg.com/@waline/emojis@1.4.0/bmoji",
+			"https://s4.zstatic.net/npm/@waline/emojis@1.4.0/weibo",
+			"https://s4.zstatic.net/npm/@waline/emojis@1.4.0/bilibili",
+			"https://s4.zstatic.net/npm/@waline/emojis@1.4.0/bmoji",
 		],
 		// 评论登录模式。允许登录，也允许匿名评论；登录用户使用账号头像，匿名评论使用默认头像。
 		login: "enable",
