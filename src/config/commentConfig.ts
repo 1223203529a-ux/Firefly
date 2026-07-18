@@ -32,8 +32,8 @@ export const commentConfig: CommentConfig = {
 			"https://unpkg.com/@waline/emojis@1.4.0/bilibili",
 			"https://unpkg.com/@waline/emojis@1.4.0/bmoji",
 		],
-		// 评论登录模式。禁用登录和 OAuth，让评论头像始终按用户填写的邮箱生成。
-		login: "disable",
+		// 评论登录模式。允许第三方登录，登录用户优先使用对应登录平台的头像。
+		login: "enable",
 		// 是否启用文章访问量统计功能
 		visitorCount: true,
 	},
