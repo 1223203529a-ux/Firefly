@@ -28,6 +28,66 @@ const config = {
   </style>
   <script type="module" is:inline define:vars={{ config }}>
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+    const WALINE_USER_STORAGE_KEY = "WALINE_USER";
+    const TOKEN_API_URL = `${config.serverURL.replace(/\/$/, "")}/api/token?lang=${config.lang || "zh-CN"}`;
+
+    let latestAvatar = "";
+
+    function readWalineUser() {
+      try {
+        return JSON.parse(localStorage.getItem(WALINE_USER_STORAGE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function syncEditorAvatar() {
+      if (!latestAvatar) return;
+
+      document
+        .querySelectorAll("#waline .wl-login-nick img")
+        .forEach((avatarImage) => {
+          if (avatarImage.getAttribute("src") !== latestAvatar) {
+            avatarImage.setAttribute("src", latestAvatar);
+          }
+        });
+    }
+
+    async function refreshWalineUserFromServer() {
+      const cachedUser = readWalineUser();
+
+      if (!cachedUser.token) return;
+
+      try {
+        const resp = await fetch(TOKEN_API_URL, {
+          headers: {
+            Authorization: `Bearer ${cachedUser.token}`,
+          },
+        }).then((res) => res.json());
+
+        if (resp.errno !== 0 || !resp.data?.avatar) return;
+
+        latestAvatar = resp.data.avatar;
+        localStorage.setItem(
+          WALINE_USER_STORAGE_KEY,
+          JSON.stringify({
+            ...cachedUser,
+            ...resp.data,
+            token: cachedUser.token,
+          }),
+        );
+        syncEditorAvatar();
+      } catch {
+        // 网络失败时保留 Waline 默认行为，不影响评论加载。
+      }
+    }
+
     init(config);
+    refreshWalineUserFromServer();
+
+    const observer = new MutationObserver(syncEditorAvatar);
+    observer.observe(document.querySelector("#waline"), { childList: true, subtree: true });
+    setInterval(syncEditorAvatar, 1500);
   </script>
 </div>
