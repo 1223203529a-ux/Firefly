@@ -22,8 +22,8 @@ export const commentConfig: CommentConfig = {
 
 	//waline评论系统配置
 	waline: {
-		// waline 后端服务地址
-		serverURL: "https://snozze-waline.vercel.app",
+		// Waline 后端同站代理地址。浏览器优先访问本站 /waline，再由 Cloudflare 转发到后端，避免国内网络直连 Vercel 失败。
+		serverURL: "https://firefly-08r.pages.dev/waline",
 		// 设置 Waline 评论系统语言
 		lang: "zh-CN",
 		// 设置 Waline 评论系统表情地址
