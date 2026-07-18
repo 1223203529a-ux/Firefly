@@ -18,6 +18,14 @@ const config = {
 <div class="relative w-full">
   <div id="waline"></div>
   <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+  <style is:global>
+    /* 隐藏公共 OAuth 中国内访问或回调不稳定的平台，只保留 QQ 和 GitHub。 */
+    #waline a[href*="/api/oauth?type=weibo"],
+    #waline a[href*="/api/oauth?type=twitter"],
+    #waline a[href*="/api/oauth?type=facebook"] {
+      display: none !important;
+    }
+  </style>
   <script type="module" is:inline define:vars={{ config }}>
     import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
     init(config);
