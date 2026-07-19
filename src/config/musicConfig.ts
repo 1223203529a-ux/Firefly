@@ -28,8 +28,8 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		// 类型：song=单曲（使用逗号分隔多个ID）
 		type: "song",
 
-		// 单曲ID（逗号分隔，按播放顺序）
-		id: "1363553440,2112276979,1394167216,1331819951,2083785152,3372049929,287319",
+		// 单曲ID（逗号分隔，按播放顺序；已优先选择实测 2 分钟以上的可播放版本）
+		id: "3388970710,2112276979,1394167216,1399642631,3351403063,3372049929,34200629",
 
 		// 备用API配置（当主API失败时自动切换）
 		fallbackApis: [
@@ -42,11 +42,11 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
-				name: "出现又离开 (Live)",
-				artist: "梁博",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1363553440&auth=80556d1385665f9f563708d112d5e2b962ffac4d",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164054054313&auth=073ab97426107ce2a4c56cf0ba1f4b1ee55ca5ae",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1363553440&auth=c321143dcc28cbb39d9cfbf3a93031ebc0051824",
+				name: "出现又离开",
+				artist: "梁博- / MissGoog",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=3388970710&auth=b3a04e34ca7ab6893c3606f4c169fb2fe5c7fd9e",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951173021821518&auth=e31402175d51dff0d2d955330722827c88b351b3",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=3388970710&auth=55500d78689849886acffddc97ef1168fd7ca41e",
 			},
 			{
 				name: "剩下的盛夏",
@@ -65,16 +65,16 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 			{
 				name: "像鱼",
 				artist: "王贰浪",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1331819951&auth=f8910f58b9364a51af4ef789f6a2ff2c3d1d6761",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951169297651430&auth=8082ee9dbdf91b228d56e1ac914129ae595d124b",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1331819951&auth=09e050cef44d1b9bb109ff5b17b20fff281f31e6",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1399642631&auth=3ba32c1bad68038850cb677f9827d5adc959c48b",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951169297723419&auth=8828989eec8d70f1a00a61979952fffe09a7be52",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1399642631&auth=7bc3d2c65d40a4aedb9391ede37f98965955d3d6",
 			},
 			{
 				name: "唯一",
-				artist: "G.E.M.邓紫棋",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2083785152&auth=5dbf5f2de8d60e492304ebf85e4effda5d2e947a",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951168919708423&auth=9705e7cb18afb3a6a0d9daee270ddcfdae48f4c7",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2083785152&auth=ea4a612f684f59ccad8d01f7fdbffa8147b65d8c",
+				artist: "Sazablue / G.E.M.邓紫棋",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=3351403063&auth=3f55d09d99409151d1d93eb0db375dd3e465f088",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951172521530417&auth=38f99b1660cde3bd67c1f9dc78ec99f64be82cae",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=3351403063&auth=7be43b443e6d8f083b1ff58db2dd7fdea9812bed",
 			},
 			{
 				name: "稻香",
@@ -84,11 +84,11 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=3372049929&auth=054350577e9a32f03d01d275d946d714ea451333",
 			},
 			{
-				name: "遇见",
+				name: "遇见 (Live)",
 				artist: "孙燕姿",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=287319&auth=e3a2d1449f23ac81df76c4f466cfbd2b0156e69e",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951169717940503&auth=18a4a10a7f9de2d17fd63ba9a04763d9dbd04ffe",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=287319&auth=0ad10cefe66584dd7223cfd516ac3b5fbb76514f",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=34200629&auth=be92537ec5840a723c65de51dc386fdf9070a991",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=7931876884848881&auth=daaa046505d36d4644c78e8986ac325c4723a916",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=34200629&auth=7f599bd0bf64b9047b4b7e162d8d5821df02141b",
 			},
 		],
 	},
