@@ -29,7 +29,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		type: "song",
 
 		// 单曲ID（逗号分隔，按播放顺序；已优先选择实测 2 分钟以上的可播放版本）
-		id: "3388970710,2112276979,1394167216,1399642631,3351403063,3372049929,34200629",
+		id: "2127920019,2112276979,1394167216,1399642631,3351403063,3372049929,34200629",
 
 		// 备用API配置（当主API失败时自动切换）
 		fallbackApis: [
@@ -43,9 +43,9 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		playlist: [
 			{
 				name: "出现又离开",
-				artist: "梁博- / MissGoog",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=3388970710&auth=b3a04e34ca7ab6893c3606f4c169fb2fe5c7fd9e",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951173021821518&auth=e31402175d51dff0d2d955330722827c88b351b3",
+				artist: "梁博",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2127920019&auth=d203433754b8bf164ffd9b5f2dd0143327981375",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951169350145768&auth=85710022ceeb2a1ed0f1404e0bd6f3d07b3cd368",
 				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1363553440&auth=c321143dcc28cbb39d9cfbf3a93031ebc0051824",
 			},
 			{
@@ -71,7 +71,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 			},
 			{
 				name: "唯一",
-				artist: "Sazablue / G.E.M.邓紫棋",
+				artist: "G.E.M.邓紫棋",
 				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=3351403063&auth=3f55d09d99409151d1d93eb0db375dd3e465f088",
 				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951172521530417&auth=38f99b1660cde3bd67c1f9dc78ec99f64be82cae",
 				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2083785152&auth=ea4a612f684f59ccad8d01f7fdbffa8147b65d8c",
