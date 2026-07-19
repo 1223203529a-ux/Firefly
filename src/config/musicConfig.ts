@@ -42,10 +42,10 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
-				name: "出现又离开",
+				name: "出现又离开 (Live)",
 				artist: "梁博",
 				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2127920019&auth=d203433754b8bf164ffd9b5f2dd0143327981375",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951169350145768&auth=85710022ceeb2a1ed0f1404e0bd6f3d07b3cd368",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164054054313&auth=073ab97426107ce2a4c56cf0ba1f4b1ee55ca5ae",
 				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1363553440&auth=c321143dcc28cbb39d9cfbf3a93031ebc0051824",
 			},
 			{
@@ -73,7 +73,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				name: "唯一",
 				artist: "G.E.M.邓紫棋",
 				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=3351403063&auth=3f55d09d99409151d1d93eb0db375dd3e465f088",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951172521530417&auth=38f99b1660cde3bd67c1f9dc78ec99f64be82cae",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951168919708423&auth=9705e7cb18afb3a6a0d9daee270ddcfdae48f4c7",
 				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2083785152&auth=ea4a612f684f59ccad8d01f7fdbffa8147b65d8c",
 			},
 			{
