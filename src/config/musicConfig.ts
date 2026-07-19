@@ -29,7 +29,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		type: "song",
 
 		// 单曲ID（逗号分隔，按播放顺序；已优先选择实测 2 分钟以上的可播放版本）
-		id: "2127920019,2112276979,1394167216,1399642631,3351403063,3372049929,34200629",
+		id: "2706243890,2112276979,1394167216,1399642631,1807799505,3372049929,34200629",
 
 		// 备用API配置（当主API失败时自动切换）
 		fallbackApis: [
@@ -42,11 +42,11 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
-				name: "出现又离开 (Live)",
-				artist: "梁博",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2127920019&auth=d203433754b8bf164ffd9b5f2dd0143327981375",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164054054313&auth=073ab97426107ce2a4c56cf0ba1f4b1ee55ca5ae",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1363553440&auth=c321143dcc28cbb39d9cfbf3a93031ebc0051824",
+				name: "出现又离开",
+				artist: "那英",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2706243890&auth=31a4e0ab399e622f85358e2f9eb53f073b3426fc",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951170999115908&auth=024fe1ec8ddef7119fb4d56709ac460549aec4dc",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2706243890&auth=3a2dfccd63514891312cd9b32a1e250dbd81e973",
 			},
 			{
 				name: "剩下的盛夏",
@@ -71,10 +71,10 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 			},
 			{
 				name: "唯一",
-				artist: "G.E.M.邓紫棋",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=3351403063&auth=3f55d09d99409151d1d93eb0db375dd3e465f088",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951168919708423&auth=9705e7cb18afb3a6a0d9daee270ddcfdae48f4c7",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2083785152&auth=ea4a612f684f59ccad8d01f7fdbffa8147b65d8c",
+				artist: "告五人",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1807799505&auth=32d77063b79ec3281045edb3fcff3b9d7218b2b3",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165585701063&auth=261a2a0bb0e38b4e89bfcb3b193ed4bdbe50c031",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1807799505&auth=a2bc34d27f3fcaa819d78ef5518f0b3122d3127f",
 			},
 			{
 				name: "稻香",
