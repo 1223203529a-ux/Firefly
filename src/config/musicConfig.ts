@@ -29,7 +29,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		type: "song",
 
 		// 单曲ID（逗号分隔，按播放顺序）
-		id: "2010069209,1394167216,1331819951,2083785152,3372049929,287319",
+		id: "1363553440,2112276979,1394167216,1331819951,2083785152,3372049929,287319",
 
 		// 备用API配置（当主API失败时自动切换）
 		fallbackApis: [
@@ -42,11 +42,18 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
+				name: "出现又离开 (Live)",
+				artist: "梁博",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1363553440&auth=80556d1385665f9f563708d112d5e2b962ffac4d",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164054054313&auth=073ab97426107ce2a4c56cf0ba1f4b1ee55ca5ae",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1363553440&auth=c321143dcc28cbb39d9cfbf3a93031ebc0051824",
+			},
+			{
 				name: "剩下的盛夏",
-				artist: "杨鹤松",
-				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2010069209&auth=0a36237d99f37b961660781aea6275823f7121e7",
-				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951168185413219&auth=b8666f50d198669eeeadb0675aef6ff855b0cac4",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2010069209&auth=34ae96fa3b67afc5c71e979b8aa26a476d9119e3",
+				artist: "TFBOYS",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2112276979&auth=b981b696ffb96fd29c958e5d469ade2dec6d18b3",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951169215305784&auth=8a1b7299b5992a52e51a9c79e200b948acedf19e",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2112276979&auth=c25f9799542d4e7253219c1c341d582fb6ebc314",
 			},
 			{
 				name: "知我",
