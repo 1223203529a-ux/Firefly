@@ -46,7 +46,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				artist: "梁博- / MissGoog",
 				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=3388970710&auth=b3a04e34ca7ab6893c3606f4c169fb2fe5c7fd9e",
 				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951173021821518&auth=e31402175d51dff0d2d955330722827c88b351b3",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=3388970710&auth=55500d78689849886acffddc97ef1168fd7ca41e",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=1363553440&auth=c321143dcc28cbb39d9cfbf3a93031ebc0051824",
 			},
 			{
 				name: "剩下的盛夏",
@@ -74,7 +74,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				artist: "Sazablue / G.E.M.邓紫棋",
 				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=3351403063&auth=3f55d09d99409151d1d93eb0db375dd3e465f088",
 				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951172521530417&auth=38f99b1660cde3bd67c1f9dc78ec99f64be82cae",
-				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=3351403063&auth=7be43b443e6d8f083b1ff58db2dd7fdea9812bed",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2083785152&auth=ea4a612f684f59ccad8d01f7fdbffa8147b65d8c",
 			},
 			{
 				name: "稻香",
