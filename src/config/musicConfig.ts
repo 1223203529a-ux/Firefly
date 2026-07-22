@@ -29,7 +29,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		type: "song",
 
 		// 单曲ID（逗号分隔，按播放顺序；已优先选择实测 2 分钟以上的可播放版本）
-		id: "2706243890,2112276979,1394167216,1399642631,1807799505,3372049929,34200629",
+		id: "2706243890,2112276979,1394167216,1399642631,1807799505,3372049929,34200629,2063718207",
 
 		// 备用API配置（当主API失败时自动切换）
 		fallbackApis: [
@@ -91,11 +91,11 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=34200629&auth=7f599bd0bf64b9047b4b7e162d8d5821df02141b",
 			},
 			{
-				name: "Sample this (降调版)",
+				name: "Sample this",
 				artist: "RJ Pasin",
-				url: "https://api.i-meto.com/meting/api?server=kugou&type=url&id=8ec1753803b2b4bb7030cf32f5807061&auth=eb9e083efe309020bab8c5c5c49fa93249525bc5",
-				cover: "https://api.i-meto.com/meting/api?server=kugou&type=pic&id=8ec1753803b2b4bb7030cf32f5807061&auth=23f75159e638802f75d3ec5459fd457b923bc684",
-				lrc: "https://api.i-meto.com/meting/api?server=kugou&type=lrc&id=8ec1753803b2b4bb7030cf32f5807061&auth=8ce4ab304002729076e98736308b924f7d736932",
+				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2063718207&auth=c4410aaaeb081576fcb83a509152a9eef9717363",
+				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951168736797480&auth=5fb77beaebf5f3aa69a62d1e6c6e740f45386f0f",
+				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2063718207&auth=1bbdae6658f67f7f43b1bb46672ca4d715687912",
 			},
 		],
 	},
