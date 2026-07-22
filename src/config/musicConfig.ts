@@ -90,6 +90,13 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=7931876884848881&auth=daaa046505d36d4644c78e8986ac325c4723a916",
 				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=34200629&auth=7f599bd0bf64b9047b4b7e162d8d5821df02141b",
 			},
+			{
+				name: "Sample this (降调版)",
+				artist: "RJ Pasin",
+				url: "https://api.i-meto.com/meting/api?server=kugou&type=url&id=8ec1753803b2b4bb7030cf32f5807061&auth=eb9e083efe309020bab8c5c5c49fa93249525bc5",
+				cover: "https://api.i-meto.com/meting/api?server=kugou&type=pic&id=8ec1753803b2b4bb7030cf32f5807061&auth=23f75159e638802f75d3ec5459fd457b923bc684",
+				lrc: "https://api.i-meto.com/meting/api?server=kugou&type=lrc&id=8ec1753803b2b4bb7030cf32f5807061&auth=8ce4ab304002729076e98736308b924f7d736932",
+			},
 		],
 	},
 };
