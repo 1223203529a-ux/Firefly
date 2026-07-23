@@ -8,7 +8,7 @@ category: 游戏
 tags: [游戏账号, Steam, Epic]
 draft: false
 image: images/firefly3.avif
-password: "122320"
+password: "159753"
 passwordHint: 保密
 ---
 
