@@ -50,6 +50,15 @@ export const friendsConfig: FriendLink[] = [
 		weight: 8,
 		enabled: true,
 	},
+	{
+		title: "番茄主理人",
+		imgurl: "https://aka.doubaocdn.com/s/2IQi28k6ee",
+		desc: "躬身入局，心为主理，行有尺度，自持本心.",
+		siteurl: "https://blog.fqzlr.top/",
+		tags: ["Blog"],
+		weight: 7,
+		enabled: true,
+	},
 ];
 
 // 获取启用的友链并进行排序
