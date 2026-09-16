@@ -20,7 +20,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	// Meting API 配置
 	meting: {
 		// Meting API 地址
-		api: "https://api.injahow.cn/meting/?server=:server&type=:type&id=:id",
+		api: "https://api.moeyao.cn/meting/?server=:server&type=:type&id=:id",
 
 		// 音乐平台：netease=网易云音乐
 		server: "netease",
@@ -36,7 +36,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 
 		// 备用API配置（当主API失败时自动切换）
 		fallbackApis: [
-			"https://api.moeyao.cn/meting/?server=:server&type=:type&id=:id",
+			"https://api.injahow.cn/meting/?server=:server&type=:type&id=:id",
 		],
 	},
 
@@ -46,65 +46,65 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 			{
 				name: "出现又离开",
 				artist: "那英",
-				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=2706243890",
+				url: "https://api.moeyao.cn/meting/?server=netease&type=url&id=2706243890",
 				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951170999115908",
-				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=2706243890",
+				lrc: "https://api.moeyao.cn/meting/?server=netease&type=lrc&id=2706243890",
 			},
 			{
 				name: "剩下的盛夏",
 				artist: "TFBOYS",
-				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=2112276979",
+				url: "https://api.moeyao.cn/meting/?server=netease&type=url&id=2112276979",
 				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951169215305784",
-				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=2112276979",
+				lrc: "https://api.moeyao.cn/meting/?server=netease&type=lrc&id=2112276979",
 			},
 			{
 				name: "知我",
 				artist: "国风堂/哦漏",
-				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=1394167216",
+				url: "https://api.moeyao.cn/meting/?server=netease&type=url&id=1394167216",
 				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951164415301539",
-				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=1394167216",
+				lrc: "https://api.moeyao.cn/meting/?server=netease&type=lrc&id=1394167216",
 			},
 			{
 				name: "像鱼",
 				artist: "王贰浪",
-				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=1399642631",
+				url: "https://api.moeyao.cn/meting/?server=netease&type=url&id=1399642631",
 				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951169297723419",
-				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=1399642631",
+				lrc: "https://api.moeyao.cn/meting/?server=netease&type=lrc&id=1399642631",
 			},
 			{
 				name: "唯一",
 				artist: "告五人",
-				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=1807799505",
+				url: "https://api.moeyao.cn/meting/?server=netease&type=url&id=1807799505",
 				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951165585701063",
-				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=1807799505",
+				lrc: "https://api.moeyao.cn/meting/?server=netease&type=lrc&id=1807799505",
 			},
 			{
 				name: "稻香",
 				artist: "Lie",
-				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=3372049929",
+				url: "https://api.moeyao.cn/meting/?server=netease&type=url&id=3372049929",
 				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951173089238896",
-				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=3372049929",
+				lrc: "https://api.moeyao.cn/meting/?server=netease&type=lrc&id=3372049929",
 			},
 			{
 				name: "遇见 (Live)",
 				artist: "孙燕姿",
-				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=34200629",
+				url: "https://api.moeyao.cn/meting/?server=netease&type=url&id=34200629",
 				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=7931876884848881",
-				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=34200629",
+				lrc: "https://api.moeyao.cn/meting/?server=netease&type=lrc&id=34200629",
 			},
 			{
 				name: "Sample this",
 				artist: "RJ Pasin",
-				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=2063718207",
+				url: "https://api.moeyao.cn/meting/?server=netease&type=url&id=2063718207",
 				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951168736797480",
-				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=2063718207",
+				lrc: "https://api.moeyao.cn/meting/?server=netease&type=lrc&id=2063718207",
 			},
 			{
 				name: "时差 (On call)",
 				artist: "鹿晗",
-				url: "https://api.injahow.cn/meting/?server=netease&type=url&id=1325484898",
+				url: "https://api.moeyao.cn/meting/?server=netease&type=url&id=1325484898",
 				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=109951166673393845",
-				lrc: "https://api.injahow.cn/meting/?server=netease&type=lrc&id=1325484898",
+				lrc: "https://api.moeyao.cn/meting/?server=netease&type=lrc&id=1325484898",
 			},
 		],
 	},

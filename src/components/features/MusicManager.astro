@@ -96,7 +96,6 @@ const managerConfigStr = JSON.stringify({
 
     // ── Audio element (persistent, attached to body) ────────
     var audio = document.createElement('audio');
-    audio.crossOrigin = 'anonymous';
     audio.style.display = 'none';
     document.body.appendChild(audio);
 
@@ -230,6 +229,8 @@ const managerConfigStr = JSON.stringify({
             audio.play().then(function () {
                 if (ver !== loadVersion) return; // stale, discard
                 state.isPlaying = true;
+                state.error = null;
+                errorRetryCount = 0;
                 emit('fm:play-state', { isPlaying: true });
             }).catch(function (e) {
                 if (ver !== loadVersion) return; // stale, discard
@@ -247,6 +248,8 @@ const managerConfigStr = JSON.stringify({
         if (audio.paused) {
             audio.play().then(function () {
                 state.isPlaying = true;
+                state.error = null;
+                errorRetryCount = 0;
                 emit('fm:play-state', { isPlaying: true });
             });
         } else {
@@ -357,9 +360,25 @@ const managerConfigStr = JSON.stringify({
         playNext(true);
     });
 
+    audio.addEventListener('playing', function () {
+        errorRetryCount = 0;
+        state.error = null;
+    });
+
+    // ── Error auto-advance ───────────────────────────────────
+    var errorRetryCount = 0;
+    var MAX_ERROR_RETRIES = 3;
     audio.addEventListener('error', function () {
         state.error = 'Audio playback error';
         emit('fm:error', { message: state.error });
+        // Auto-advance to next track on error (up to MAX_ERROR_RETRIES consecutive failures)
+        if (errorRetryCount < MAX_ERROR_RETRIES && state.playlist.length > 1) {
+            errorRetryCount++;
+            console.warn('Audio error, auto-advancing to next track (retry ' + errorRetryCount + '/' + MAX_ERROR_RETRIES + ')');
+            setTimeout(function () { playNext(true); }, 1000);
+        } else {
+            errorRetryCount = 0;
+        }
     });
 
     // ── Init (idempotent) ────────────────────────────────────
