@@ -320,6 +320,7 @@ export const ru: Translation = {
 	[Key.galleryNoAlbums]: "Пока нет альбомов",
 	[Key.galleryBackToAlbums]: "Вернуться к альбомам",
 	[Key.searchAlbums]: "Поиск альбомов...",
+	[Key.anime]: "Аниме",
 
 	// Защита паролем
 	[Key.passwordProtected]: "Защищено паролем",

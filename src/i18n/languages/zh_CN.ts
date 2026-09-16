@@ -310,6 +310,7 @@ export const zh_CN: Translation = {
 	[Key.galleryNoAlbums]: "暂无相册",
 	[Key.galleryBackToAlbums]: "返回相册列表",
 	[Key.searchAlbums]: "搜索相簿...",
+	[Key.anime]: "追番",
 
 	// 密码保护
 	[Key.passwordProtected]: "密码保护",

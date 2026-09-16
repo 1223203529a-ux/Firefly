@@ -1,0 +1,52 @@
+---
+import { Icon } from "astro-icon/components";
+import { siteConfig } from "@/config";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+
+if (!siteConfig.pages.anime) {
+  return Astro.redirect("/404/");
+}
+
+const title = i18n(I18nKey.anime);
+const uid = siteConfig.anime?.bilibili?.uid?.trim() ?? "";
+const isConfigured = uid !== "";
+---
+
+<MainGridLayout title={title} description={title}>
+  <div class="flex w-full rounded-(--radius-large) overflow-hidden relative min-h-32">
+    <div class="card-base z-10 px-9 py-6 relative w-full">
+      <div class="relative w-full mb-8">
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="h-8 w-8 rounded-lg bg-(--primary) flex items-center justify-center text-white dark:text-black/70">
+              <Icon name="material-symbols:movie-info" class="text-[1.5rem]"></Icon>
+            </div>
+            <div class="text-3xl font-bold text-neutral-900 dark:text-neutral-100">
+              {title}
+            </div>
+          </div>
+        </div>
+
+        {isConfigured ? (
+          <div class="text-center py-16">
+            <p class="text-black/60 dark:text-white/60">Bilibili UID: {uid}</p>
+          </div>
+        ) : (
+          <div class="text-center py-16">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-(--btn-regular-bg) rounded-full mb-6 border border-(--line-divider)">
+              <Icon name="material-symbols:settings" class="text-[2rem] text-(--btn-content)" />
+            </div>
+            <h2 class="text-xl font-semibold text-black/80 dark:text-white/80 mb-3">
+              未配置 Bilibili UID
+            </h2>
+            <p class="text-black/60 dark:text-white/60 mb-4 max-w-md mx-auto">
+              请在 src/config/siteConfig.ts 中配置你的 Bilibili UID
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</MainGridLayout>
