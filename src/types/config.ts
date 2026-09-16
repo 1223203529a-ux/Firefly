@@ -35,7 +35,7 @@ export type SiteConfig = {
 	};
 
 	// 字体配置
-	font: FontConfig;
+	font?: FontConfig;
 
 	// 站点开始日期，用于计算运行天数
 	siteStartDate?: string; // 格式: "YYYY-MM-DD"
@@ -44,18 +44,21 @@ export type SiteConfig = {
 	timezone?: string;
 
 	// 提醒框配置
-	rehypeCallouts: {
+	rehypeCallouts?: {
 		theme: "github" | "obsidian" | "vitepress";
 	};
 
 	// bangumi配置
 	bangumi?: {
 		userId?: string; // Bangumi用户ID
+		mode?: string; // 加载模式
+		apiUrl?: string; // Bangumi API 地址
+		subjectBaseUrl?: string; // 条目基础 URL
 		categoryOrder?: ("anime" | "game" | "book" | "music" | "real")[]; // 条目类型排序顺序
 	};
 
-	generateOgImages: boolean;
-	favicon: Array<{
+	generateOgImages?: boolean;
+	favicon?: Array<{
 		src: string;
 		theme?: "light" | "dark";
 		sizes?: string;
@@ -75,7 +78,7 @@ export type SiteConfig = {
 		stickyNavbar?: boolean; // 导航栏是否固定在顶部始终可见
 	};
 
-	showLastModified: boolean; // 控制"上次编辑"卡片显示的开关
+	showLastModified?: boolean; // 控制"上次编辑"卡片显示的开关
 	outdatedThreshold?: number; // 文章过期阈值（天数），超过此天数才显示"上次编辑"卡片
 	sharePoster?: boolean; // 是否显示分享海报按钮
 
@@ -86,18 +89,37 @@ export type SiteConfig = {
 		guestbook: boolean; // 留言板页面开关
 		bangumi: boolean;
 		gallery: boolean; // 相册页面开关
+		anime?: boolean; // 追番页面开关
 	};
 
 	// 分类导航栏开关
 	categoryBar?: boolean;
 
+	// 归档页是否折叠非最新年份文章
+	foldArticle?: boolean;
+
 	// 文章列表布局配置
 	postListLayout: {
 		defaultMode: "list" | "grid"; // 默认布局模式：list=列表模式，grid=网格模式
 		mobileDefaultMode?: "list" | "grid"; // 移动端默认布局模式（视口宽度<780px时使用），不设置则跟随 defaultMode
-		showTags: boolean; // 是否在文章列表中显示标签
+		showTags?: boolean; // 是否在文章列表中显示标签
+		showStatsIcons?: boolean; // 是否显示统计图标
+		tagsPosition?: string; // 标签位置
 		descriptionLines?: number; // 文章简介显示行数，0 表示不截断，默认 2
 		allowSwitch: boolean; // 是否允许用户切换布局
+		meta?: {
+			showPublished?: boolean;
+			showCategory?: boolean;
+			showTags?: boolean;
+			tagCount?: number;
+			showWords?: boolean;
+			showReadingTime?: boolean;
+		};
+		stats?: {
+			showPublished?: boolean;
+			showWords?: boolean;
+			showReadingTime?: boolean;
+		};
 		grid: {
 			// 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效
 			// 是否开启瀑布流布局
@@ -106,6 +128,36 @@ export type SiteConfig = {
 			columnWidth?: number;
 		};
 	};
+
+	// 文章内容页配置
+	post?: {
+		rehypeCallouts?: {
+			theme: "github" | "obsidian" | "vitepress";
+			enablePythonMarkdownAdmonitions?: boolean;
+		};
+		showLastModified?: boolean;
+		outdatedThreshold?: number;
+		sharePoster?: boolean;
+		generateOgImages?: boolean;
+	};
+
+	// 追番配置
+	anime?: {
+		bilibili?: {
+			uid?: string;
+		};
+	};
+
+	// 是否启用主题色选择器
+	themeColorPicker?: boolean;
+	// 默认是否开启暗色模式
+	darkMode?: boolean;
+	// 是否显示网站运行时长
+	showSiteRunningTime?: boolean;
+	// 网站建立时间
+	sinceDate?: string;
+	// 是否在导航栏显示搜索按钮
+	showSearchInNavbar?: boolean;
 
 	// 分页配置
 	pagination: {
@@ -179,6 +231,7 @@ export enum LinkPreset {
 	Guestbook = 5,
 	Bangumi = 6,
 	Gallery = 7,
+	Anime = 8,
 }
 
 export type NavBarLink = {

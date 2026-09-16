@@ -1,4 +1,4 @@
-﻿import type { ProfileConfig } from "../types/profileConfig";
+﻿import type { ProfileConfig } from "../types/config";
 
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.avif",
