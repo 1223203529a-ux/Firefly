@@ -29,7 +29,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		type: "song",
 
 		// 单曲ID（逗号分隔，按播放顺序；已优先选择实测 2 分钟以上的可播放版本）
-		id: "2706243890,2112276979,1394167216,1399642631,1807799505,3372049929,34200629,2063718207",
+		id: "2706243890,2112276979,1394167216,1399642631,1807799505,3372049929,34200629,2063718207,1325484898",
 
 		// 备用API配置（当主API失败时自动切换）
 		fallbackApis: [
@@ -96,6 +96,13 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 				url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2063718207&auth=c4410aaaeb081576fcb83a509152a9eef9717363",
 				cover: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951168736797480&auth=5fb77beaebf5f3aa69a62d1e6c6e740f45386f0f",
 				lrc: "https://api.i-meto.com/meting/api?server=netease&type=lrc&id=2063718207&auth=1bbdae6658f67f7f43b1bb46672ca4d715687912",
+			},
+			{
+				name: "时差 (On call)",
+				artist: "鹿晗",
+				url: "https://api.moeyao.cn/meting/?server=netease&type=url&id=1325484898",
+				cover: "https://api.injahow.cn/meting/?server=netease&type=pic&id=1325484898",
+				lrc: "https://api.moeyao.cn/meting/?server=netease&type=lrc&id=1325484898",
 			},
 		],
 	},
